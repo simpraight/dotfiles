@@ -1,0 +1,21 @@
+
+" use CTRL-F for omni completion
+imap <C-F> 
+
+" use <F6> to toggle line numbers
+nmap <silent> <F6> :set number!<CR>
+
+" page down with <Space>
+nmap <Space> <PageDown>
+
+" open filename under cursor in a new window (use current file's working
+" directory) 
+nnoremap <Esc>P  P'[v']=
+nnoremap <Esc>p  p'[v']=
+
+" visual shifting (does not exit Visual mode)
+vnoremap < <gv
+vnoremap > >gv 
+
+nnoremap <C-Tab>   gt
+nnoremap <C-S-Tab> gT

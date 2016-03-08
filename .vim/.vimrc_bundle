@@ -1,0 +1,31 @@
+filetype plugin indent off
+
+if has('vim_starting')
+    set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
+if &compatible
+    set nocompatible
+endif
+
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+NeoBundle 'w0ng/vim-hybrid'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'thinca/vim-ref'
+NeoBundle 'StanAngeloff/php.vim'
+NeoBundle 'itchyny/lightline.vim'
+NeoBundle 'tpope/vim-pathogen'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'everzet/phpfolding.vim'
+NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'ap/vim-css-color'
+
+call neobundle#end()
+
+NeoBundleCheck
+
+" Enable loading filetype and indentation plugins
+filetype plugin indent on
