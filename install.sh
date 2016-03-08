@@ -31,3 +31,8 @@ do
 
     ln -snfv "$DOTPATH/$f" "$HOME/$f"
 done
+
+if [ -e "$DOTPATH/.vim/bundle" ]; then
+    git clone "git://github.com/Shougo/neobundle.vim" "$DOTPATH/.vim/bundle/neobundle.vim"
+fi
+
