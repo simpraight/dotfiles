@@ -4,25 +4,32 @@ if !has('gui_running')
     set t_Co=256
 endif
 
-set background=dark
-
-colorscheme hybrid
-
 set number
 
 set ambiwidth=double
 
 set showtabline=2
 
-" Generic highlight changes
-highlight Comment cterm=none ctermfg=Gray
-highlight IncSearch cterm=none ctermfg=Black ctermbg=DarkYellow
-highlight Search cterm=none ctermfg=Black ctermbg=DarkYellow
-highlight String cterm=none ctermfg=DarkGreen
-highlight treeDir cterm=none ctermfg=Cyan
-highlight treeUp cterm=none ctermfg=DarkYellow
-highlight treeCWD cterm=none ctermfg=DarkYellow
-highlight netrwDir cterm=none ctermfg=Cyan
-highlight TabLine     term=reverse cterm=reverse ctermfg=white ctermbg=black
-highlight TabLineSel  term=bold cterm=bold,underline ctermfg=5
-highlight TabLineFill term=reverse cterm=reverse ctermfg=white ctermbg=black
+"
+" hybrid theme
+"
+let g:hybrid_reduced_contrast = 1
+
+"
+" Grubox theme
+"
+let g:gruvbox_contrast_dark = 'hard'
+
+"
+" Molokai theme
+"
+let g:molokai_original = 1
+
+"
+" Solarized theme
+"
+let g:solarized_termcolors=256
+"let g:solarized_termtrans=1
+
+set background=dark
+colorscheme solarized

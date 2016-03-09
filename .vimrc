@@ -13,11 +13,12 @@ source ~/.vim/.vimrc_keymap
 "
 " bundle: NERDTree
 "
-
 let NERDTreeShowHidden = 1
 let NERDTreeWinSize=30
+let g:NERDTreeDirArrows = 1
+let g:NERDTreeDirArrowExpandable = '+'
+let g:NERDTreeDirArrowCollapsible = '~'
 
-" map <F7> to toggle NERDTree window
 nmap <silent> <F7> :NERDTreeToggle<CR>
 
 "
@@ -59,10 +60,11 @@ let g:syntastic_php_checkers = ['php']
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 1
-let g:syntastic_error_symbol='✗'
+let g:syntastic_error_symbol='×'
 let g:syntastic_warning_symbol='⚠'
-let g:syntastic_style_error_symbol = '✗'
+let g:syntastic_style_error_symbol = '×'
 let g:syntastic_style_warning_symbol = '⚠'
+
 
 "
 " bundle: indent-guides

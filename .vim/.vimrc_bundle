@@ -13,6 +13,11 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 NeoBundle 'w0ng/vim-hybrid'
+"NeoBundle 'morhetz/gruvbox'
+"NeoBundle 'tomasr/molokai'
+NeoBundle 'altercation/vim-colors-solarized'
+"NeoBundle 'cocopon/iceberg.vim'
+
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'thinca/vim-ref'
 NeoBundle 'StanAngeloff/php.vim'
@@ -22,6 +27,7 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'everzet/phpfolding.vim'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'ap/vim-css-color'
+NeoBundle 'tpope/vim-surround'
 
 call neobundle#end()
 

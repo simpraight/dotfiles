@@ -16,3 +16,5 @@ alias mv='mv -iv'
 alias la='ls -ah'
 alias ll='ls -lhG'
 alias ls='ls --color=auto --show-control-chars'
+
+test -r ~/.bashrc && . ~/.bashrc
