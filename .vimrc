@@ -78,3 +78,44 @@ let g:indent_guides_enable_on_vim_startup = 1
 " bundle: php-foldings
 "
 hi Folded ctermbg=232
+
+"
+" bundle: surround
+"
+let g:surround_42 = "{{ '\r' }}"
+
+"
+" bundle: NeoComplcache
+"
+let g:acp_enableAtStartup = 0
+let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_enable_smart_case = 1
+let g:neocomplcache_min_syntax_length = 3
+let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
+
+let g:neocomplcache_dictionary_filetype_lists = {}
+let g:neocomplcache_dictionary_filetype_lists['default'] = ''
+
+if !exists('g:neocomplcache_keyword_patterns')
+    let g:neocomplcache_keyword_patterns = {}
+endif
+let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
+
+" <CR>: close popup and save indent.
+function! s:my_cr_function()
+  "return neocomplcache#smart_close_popup() . "\<CR>"
+  " For no inserting <CR> key.
+  return pumvisible() ? neocomplcache#close_popup() : "\<CR>"
+endfunction
+" key-mappings.
+inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
+inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
+"inoremap <expr><C-y>  neocomplcache#close_popup()
+"inoremap <expr><C-e>  neocomplcache#cancel_popup()
+"inoremap <expr><Space> pumvisible() ? neocomplcache#close_popup() : "\<Space>"
+"inoremap <expr><Left>  neocomplcache#close_popup() . "\<Left>"
+"inoremap <expr><Right> neocomplcache#close_popup() . "\<Right>"
+"inoremap <expr><Up>    neocomplcache#close_popup() . "\<Up>"
+"inoremap <expr><Down>  neocomplcache#close_popup() . "\<Down>"
